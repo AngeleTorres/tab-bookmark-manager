@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tab Manager</title>
+  <link rel="stylesheet" href="newtab.css" />
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <div id="sidebar-header">
+        <h1>Grupos</h1>
+        <button id="new-group-btn" class="btn-primary" title="Crear grupo">+ Nuevo</button>
+      </div>
+      <input id="search-input" type="search" placeholder="Buscar grupo..." />
+      <ul id="group-nav-list"></ul>
+      <div id="sidebar-footer">
+        <button id="export-btn" class="btn-ghost" title="Descargar tus datos como archivo .json">⬇ Exportar</button>
+        <button id="import-btn" class="btn-ghost" title="Cargar datos desde un archivo .json">⬆ Importar</button>
+        <input id="import-file-input" type="file" accept="application/json" hidden />
+      </div>
+    </aside>
+
+    <main id="main">
+      <div id="main-header">
+        <h2>Mis pestañas</h2>
+        <div id="main-actions">
+          <button id="expand-all-btn" class="btn-ghost">Expandir</button>
+          <button id="collapse-all-btn" class="btn-ghost">Colapsar</button>
+          <button id="add-group-btn" class="btn-primary">+ Grupo</button>
+        </div>
+      </div>
+      <div id="groups-container"></div>
+      <p id="empty-state">Crea tu primer grupo con "+ Grupo", o arrastra una pestaña desde el panel derecho.</p>
+      <p id="no-results-state" hidden>Sin resultados.</p>
+    </main>
+
+    <aside id="tabs-panel">
+      <div id="tabs-panel-header">
+        <h3>Pestañas abiertas</h3>
+        <div id="tabs-panel-header-actions">
+          <button id="refresh-tabs-btn" title="Actualizar">⟳</button>
+          <button id="toggle-tabs-panel-btn" title="Colapsar panel">»</button>
+        </div>
+      </div>
+      <div id="tabs-panel-content">
+        <p class="hint">Arrastra una pestaña a un grupo, o haz clic para elegir el grupo destino.</p>
+        <p id="tabs-panel-status"></p>
+        <ul id="open-tabs-list"></ul>
+      </div>
+    </aside>
+  </div>
+
+  <div id="modal-overlay" hidden>
+    <div id="modal">
+      <label for="modal-input" id="modal-label">Nombre</label>
+      <input id="modal-input" type="text" maxlength="60" />
+      <label for="modal-input-2" id="modal-label-2" hidden>URL</label>
+      <input id="modal-input-2" type="text" placeholder="https://" hidden />
+      <div id="modal-actions">
+        <button id="modal-cancel">Cancelar</button>
+        <button id="modal-confirm">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="group-picker" hidden></div>
+
+  <div id="toast" hidden>
+    <span id="toast-message"></span>
+    <button id="toast-undo">Deshacer</button>
+  </div>
+
+  <script type="module" src="newtab.js"></script>
+</body>
+</html>
