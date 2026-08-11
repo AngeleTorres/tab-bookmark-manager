@@ -1,6 +1,6 @@
 # Tab & Bookmark Manager
 
-Extensión de Chrome para organizar pestañas y marcadores en grupos, inspirada en [Toby](https://www.gettoby.com/). Reemplaza la página de "Nueva pestaña" por un panel central donde puedes guardar, agrupar y volver a abrir tus pestañas.
+Extensión de Chrome y Brave para organizar pestañas y marcadores en grupos, inspirada en [Toby](https://www.gettoby.com/). Reemplaza la página de "Nueva pestaña" por un panel central donde puedes guardar, agrupar y volver a abrir tus pestañas.
 
 ## Características
 
